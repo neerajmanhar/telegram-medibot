@@ -26,6 +26,7 @@ def split_text_into_chunks(text, max_chars=250):
 
 def generate_speech(text, output_path="assets/doctor_voice.mp3", voice_id="gHu9GtaHOXcSqFTK06ux", speedup_factor=1.1):
     try:
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
         # --- ElevenLabs primary TTS ---
         chunks = split_text_into_chunks(text)
         request_ids = []
