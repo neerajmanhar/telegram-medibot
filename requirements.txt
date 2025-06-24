@@ -1,7 +1,9 @@
 python-telegram-bot==20.7
-openai>=1.0.0
+openai
 groq
 python-dotenv
 gtts
 requests
 pydub
+elevenlabs
+sqlalchemy
