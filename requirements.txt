@@ -7,4 +7,3 @@ requests
 pydub
 elevenlabs
 sqlalchemy
-numpy
