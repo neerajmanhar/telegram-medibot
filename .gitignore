@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets and config
+.env
+
+
+# SQLite DB files
+*.db
+
+# Audio & temporary files
+assets/*.mp3
+
+# Test/debug scripts
+test.py
