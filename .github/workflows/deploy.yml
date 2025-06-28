@@ -1,4 +1,4 @@
-name: Deploy MediBot to AWS EC2
+name: Deploy MediBot to EC2
 
 on:
   push:
@@ -10,16 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Connect to EC2 and Pull Latest Code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: SSH Deploy to EC2
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ubuntu
-        key: ${{ secrets.EC2_SSH_KEY }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/telegram-medibot
+          cd telegram-medibot
           git pull origin main
           source venv/bin/activate
           pip install -r requirements.txt
-          sudo pkill -f "python main.py" || true
-          nohup python main.py > medibot.log 2>&1 &
+          sudo systemctl restart medibot.service
