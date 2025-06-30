@@ -70,7 +70,7 @@ def ask_doctor_with_memory(query, memory=None, image_path=None):
         messages.append({"role": "user", "content": query})
 
     response = client.chat.completions.create(
-        model="o1",
+        model="o3",
         messages=messages
     )
 
