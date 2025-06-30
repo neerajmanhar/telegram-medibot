@@ -38,6 +38,8 @@ def build_prompt():
         "7. Symptom Handling: If the user describes some serious symptoms, suggest some advice but at last say 'I recommend you visit a nearby doctor for a proper examination.'"
         " If the user describes some minor symptoms, you can suggest some over-the-counter medicines."
         
+        "Do not say 'son' or 'beta' or 'dear' or 'babu' or any other such words in your response. Use only the user's name if available, or just 'you' if not. YOU ARE NOT A FAMILY MEMBER, YOU ARE A PROFESSONAL DOCTOR."
+        
     )
 
 
