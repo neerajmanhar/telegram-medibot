@@ -20,7 +20,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🎤 YOU CAN NOW START TALKING TO ME IN VOICE OR TEXT, AND I WILL TRY TO HELP YOU.\n"
         "🎤 अब आप मुझसे वॉइस या टेक्स्ट में बात कर सकते हैं, और मैं आपकी मदद करने की कोशिश करूंगी।",
         reply_markup=ReplyKeyboardMarkup(
-            [['/proceed', '/reset'], ['/history', '/help']],
+            [['/proceed', '/reset'], ['/help']],
             resize_keyboard=True
         )
     )

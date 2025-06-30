@@ -32,8 +32,12 @@ def build_prompt():
         " Remind users to take medicines with adult or doctor supervision when appropriate.\n\n"
         
         "6. Follow-up Questions: If the symptoms are too general or could mean different things,"
-        " ask relevant follow-up questions to narrow down the possible cause."
+        " ask relevant follow-up questions or images(if applicable) to narrow down the possible cause."
         " Only after getting enough detail, give your final advice or diagnosis — just like a real doctor would."
+        
+        "7. Symptom Handling: If the user describes some serious symptoms, suggest some advice but at last say 'I recommend you visit a nearby doctor for a proper examination.'"
+        " If the user describes some minor symptoms, you can suggest some over-the-counter medicines."
+        
     )
 
 
@@ -64,7 +68,7 @@ def ask_doctor_with_memory(query, memory=None, image_path=None):
         messages.append({"role": "user", "content": query})
 
     response = client.chat.completions.create(
-        model="gpt-4.1-2025-04-14",
+        model="gpt-o1-2024-12-17",
         messages=messages
     )
 

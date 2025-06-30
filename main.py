@@ -9,7 +9,7 @@ init_db()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("help", help_command))
-app.add_handler(CommandHandler("history", history))
+# app.add_handler(CommandHandler("history", history))
 app.add_handler(CommandHandler("proceed", proceed))
 app.add_handler(CommandHandler("reset", reset))
 
