@@ -15,7 +15,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🔘 Choose an action (कोई एक विकल्प चुनें):\n\n"
         "/proceed – Get medical advice (स्वास्थ्य सलाह लें)\n"
         "/reset – Clear previous inputs (पिछला इनपुट हटाएं)\n"
-        "/history – Show your last submitted symptom (आखिरी लक्षण देखें)\n"
+        # "/history – Show your last submitted symptom (आखिरी लक्षण देखें)\n"
         "/help – Get help (मदद प्राप्त करें)\n\n"
         "🎤 YOU CAN NOW START TALKING TO ME IN VOICE OR TEXT, AND I WILL TRY TO HELP YOU.\n"
         "🎤 अब आप मुझसे वॉइस या टेक्स्ट में बात कर सकते हैं, और मैं आपकी मदद करने की कोशिश करूंगी।",
